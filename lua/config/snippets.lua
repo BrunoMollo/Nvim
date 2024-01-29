@@ -79,3 +79,18 @@ ls.add_snippets("svelte", {
     )
   ),
 })
+
+ls.add_snippets("html", {
+  s(
+    "@foreach",
+    fmt(
+      [[
+@foreach ($¬ as $¬)
+¬
+@endforeach
+    ]],
+      { i(1), i(2), i(3) },
+      { delimiters = "¬" }
+    )
+  ),
+})
