@@ -63,3 +63,19 @@ ls.add_snippets("svelte", {
     )
   ),
 })
+
+ls.add_snippets("svelte", {
+  s(
+    "s-pre",
+    fmt(
+      [[
+<!-- TODO:remove -->
+<pre>
+  {JSON.stringify(¬,null,2)}
+</pre>
+    ]],
+      { i(1) },
+      { delimiters = "¬" }
+    )
+  ),
+})
