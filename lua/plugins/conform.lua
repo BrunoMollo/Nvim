@@ -16,7 +16,7 @@ return {
         ["css"] = { "prettierd" },
         ["scss"] = { "prettierd" },
         ["less"] = { "prettierd" },
-        ["html"] = { "prettierd" },
+        ["html"] = { "prettierd", "blade-formatter" },
         ["json"] = { "prettierd" },
         ["jsonc"] = { "prettierd" },
         ["yaml"] = { "prettierd" },
@@ -24,6 +24,8 @@ return {
         ["markdown.mdx"] = { "prettierd" },
         ["graphql"] = { "prettierd" },
         ["handlebars"] = { "prettierd" },
+        php = { "php-cs-fixer" },
+        ["blade.php"] = { "blade-formatter" },
       },
     }
     return opts
