@@ -1,16 +1,28 @@
 return {
   "nvimdev/dashboard-nvim",
   opts = function()
-    local logo = [[
-       ██╗      █████╗ ███████╗██╗   ██╗██╗   ██╗██╗███╗   ███╗          Z
-       ██║     ██╔══██╗╚══███╔╝╚██╗ ██╔╝██║   ██║██║████╗ ████║      Z    
-       ██║     ███████║  ███╔╝  ╚████╔╝ ██║   ██║██║██╔████╔██║   z       
-       ██║     ██╔══██║ ███╔╝    ╚██╔╝  ╚██╗ ██╔╝██║██║╚██╔╝██║ z         
-       ███████╗██║  ██║███████╗   ██║    ╚████╔╝ ██║██║ ╚═╝ ██║           
-       ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝     ╚═══╝  ╚═╝╚═╝     ╚═╝          
-
-<span> Hola Bruno </span>
-  ]]
+    local logo = string.format(
+      [[
+                                                      |
+                                          %s |
+                                             %s |
+                                                      |
+                                           BrunoMollo |
+      ______                                          |
+  ___((     )_                                        |
+|'->==))   (= \                                       |
+|  \ ||_____|_ \                                      |
+|[> \___________\                                     |
+| | |            |                                    |
+ \  |            |             .--.                   |
+  \ |            |)---.   .---'    `-.         .----(]|
+   \|____________|     `-'            `.     .'       |
+                                        `---'         |
+-------------------------------------------------------
+  ]],
+      os.date("%d/%m/%Y"),
+      os.date("%H:%M:%S")
+    )
 
     logo = string.rep("\n", 8) .. logo .. "\n\n"
 
@@ -30,9 +42,9 @@ return {
 --        { action = "Telescope oldfiles",                                       desc = " Recent files",    icon = " ", key = "r" },
 --        { action = "Telescope live_grep",                                      desc = " Find text",       icon = " ", key = "g" },
         { action = [[lua require("lazyvim.util").telescope.config_files()()]], desc = " Config",          icon = " ", key = "c" },
-        { action = 'lua require("persistence").load()',                        desc = " Restore Session", icon = " ", key = "s" },
-        { action = "LazyExtras",                                               desc = " Lazy Extras",     icon = " ", key = "x" },
-        { action = "Lazy",                                                     desc = " Lazy",            icon = "󰒲 ", key = "l" },
+        -- { action = 'lua require("persistence").load()',                        desc = " Restore Session", icon = " ", key = "s" },
+        -- { action = "LazyExtras",                                               desc = " Lazy Extras",     icon = " ", key = "x" },
+        -- { action = "Lazy",                                                     desc = " Lazy",            icon = "󰒲 ", key = "l" },
         { action = "qa",                                                       desc = " Quit",            icon = " ", key = "q" },
       },
         footer = function()

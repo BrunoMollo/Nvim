@@ -4,7 +4,7 @@
 
 vim.keymap.set("n", "<S-l>", "<cmd>BufferLineCycleNext<cr>", { desc = "switch buffer next" })
 vim.keymap.set("n", "<S-h>", "<cmd>BufferLineCyclePrev<cr>", { desc = "swithc buffer prev" })
-
+vim.keymap.set("n", "<leader>su", vim.cmd.UndotreeToggle)
 vim.keymap.set("n", "gv", function()
   vim.cmd('normal! vi""0y')
   local reg = vim.fn.getreg("0")
